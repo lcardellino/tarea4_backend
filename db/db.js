@@ -1,15 +1,15 @@
 const mongoose = require ("mongoose")
-require("dotenv").config() //dotenv oculta info sensible
+require("dotenv").config() //========> dotenv oculta info sensible
 
 
-//funcion conectora
+//==> FUNC CONECTORA <==//
 const conect = async () => {
     try {
         await mongoose.connect(process.env.CONECTMONGO)
-        console.log("base de datos conectada")
+        console.log("Base de datos conectada")
     } catch {
-        console.log("no se puedo conectar a la base de datos")
+        console.log("Error al conectarse a la base de datos")
     }
-}
+};
 
 module.exports = {conect}
